@@ -59,35 +59,34 @@ _El montaje se divide en 2 partes:
 **Controlador:** PID
 
 **Implementación:**  
-_👉 [Lenguaje / IDE / Librerías utilizadas]_
+_El lenguaje es .ino, para que lo entienda la placa Esp32, pero las libreria en las que se basa, los pids a utilizar, está escrita en c++.
 
-**Sintonización del PID:**  
-- Kp = ...
-- Ki = ...
-- Kd = ...
+**Valores de cte del PID:**  
+- Kp = 50.0
+- Ki = 1.0
+- Kd = 20.0
 
-_👉 [Incluir código clave o referencia a archivos]_  
-_👉 [Mención al uso de filtro complementario si aplica]_
+**PID Seleccionado**
+- PID Filtrado, opción 3.
+
+
+_De forma resumida el codigo  compara el setpoint (posición destino) y la actual, a través del pid seleccionado, devuelve valores para los motores, que luego de ser normalizador , para enviar a los motores.
 
 ---
 
-## 🧪 Pruebas y resultados
+🎮 Control Inalambrico:
+
+implementé la conexión por Bluetooth para que el sistema pudiera recibir órdenes en tiempo real desde un celular o una app, en mi caso serial terminal bluetooth, como si fuera un control remoto. Lo que hago es leer dos valores que llegan separados por una coma: uno controla el movimiento hacia adelante o atrás, y el otro el giro. Con esos datos, ajusto el setpoint del controlador PID para que el sistema se mueva según lo que el usuario indique, y también modifico la señal de los motores para que pueda girar fácilmente. Además, hice que el sistema mande de vuelta los valores recibidos por Bluetooth, así se puede ver desde el celular que la señal llegó bien y todo está funcionando como se espera.
+
+---
+
+## Resultados
 **Escenarios de prueba:**
-- Estabilidad
-- Respuesta a perturbaciones
-- Arranque desde diferentes posiciones
+- El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis, lo único que puede fallar si no tiene el suficiente espacio, en caso de golpes grandes 1 metro, medio metro en cada dirección. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco, esto se puede deber a que tiene demasiadas respuestas por segundo.
 
-_👉 [Incluir fotos, vídeos o gráficas si hay]_
+- A parte la conexión bluetooth hace que pierde algo de potencia los motores, por lo que es más sensible a perturbaciones.
 
+- Problemas de potencia, al romperseme los dos portapilas con que contaba tuve que hacer un arreglo con una batería de 9v auxiliar, por lo que se necesita conectar el robot a una fuente de energía. 
+
+  
 ---
-
-## 📎 Recursos y referencias
-- [Enlace a datasheet de ESP32]
-- [Tutorial uso MPU6050]
-- [Página del driver TB6612FNG]
-- [Otros recursos útiles]
-
----
-
-## 🚀 Conclusiones y mejoras futuras
-_👉 [Reflexión sobre el proyecto, qué ha funcionado, qué se puede mejorar, ideas para siguientes versiones]_
