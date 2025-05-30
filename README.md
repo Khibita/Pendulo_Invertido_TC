@@ -49,8 +49,9 @@ _Solo hay una versión, la publicada, en la cual prioricé que el centro de masa
 ---
 
 ## 🔌 Montaje
-_👉 [Explicación breve del ensamblado, conexiones y organización del sistema]_
-
+_El montaje se divide en 2 partes:
+- [ ] Soldar: soldar todos los componentes a la placa, en caso de querer reutilizar los componentes, recomiendo soldar conectores macho hembra a la placa en vez de los propios componentes. IMPORTANTE SEGUIR LAS DIRECCIONES DE LA PCB .
+- [ ] Colocar las piezas: recomiendo empezar por la pcb, atornillarla una vez colocada, seguir con los motores y por último pegar la batería con silicona a su hueco. 
 ---
 
 
