@@ -1,8 +1,16 @@
 # 🧩 Proyecto: Péndulo Invertido
 
 ## 📋 Introducción
-Breve descripción del proyecto y contexto.  
-_👉 [Añadir aquí una visión general del péndulo invertido y su interés en control]_
+Este proyecto se centra en diseñar, construir y poner en marcha un péndulo invertido. Este es un sistema muy conocido en ingeniería de control porque es un ejemplo clásico de un sistema que no es lineal, es inestable y además tiene doble integración. 
+
+El péndulo invertido presenta un desafío interesante, ya que hay que crear un sistema de control capaz de mantenerlo en equilibrio vertical desde cualquier posición inicial y frente a perturbaciones externas. Para lograrlo, se ha implementado un controlador PID usando un microcontrolador ESP32, apoyado por sensores de orientación como acelerómetro y giroscopio, y un sistema de actuadores con motores DC. 
+
+Durante el desarrollo del proyecto, se han trabajado distintas áreas como:
+- [ ] el diseño y fabricación del sistema mecánico con impresión 3D.
+- [ ] la selección e integración de componentes electrónicos.
+- [ ] la programación del controlador en el entorno Arduino y la sintonización del PID para validar el comportamiento del sistema.
+
+Al final, se ha logrado crear un robot que puede mantenerse en posición vertical, resistir pequeñas perturbaciones y desplazarse controladamente. Todo el proceso está bien documentado y puedes consultarlo y reutilizarlo en este repositorio.
 
 ---
 
