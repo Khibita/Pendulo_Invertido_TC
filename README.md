@@ -23,33 +23,28 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 
 ---
 
-## 🔍 Investigación y planteamiento
-_👉 [Explicar investigaciones previas, referencias, problemas encontrados y planteamiento del proyecto]_
-
----
-
 ## 🛠️ Hardware
 **Componentes usados:**
-- ESP32: [modelo]
-- Sensor: [ej. MPU6050]
-- Driver de motor: [ej. TB6612FNG]
-- Motores: [modelo]
-- Batería: [tipo y características]
+- ESP32: [WROOM 32D], elegimos está por su bajo costé, conexiones inalambricas y poder ejecutar codigo c.
+- Sensor: [MPU9250], elegimos está por su bajo costé, y devolver aceleración en 9 ejes.
+- Driver de motor: [TB6612FNG] se ajustaba a las caracteristicas necesarias
+- Motores: [fz3176] Motor de corriente continua que se ajustaba al precio y potencia de consumo
+- Batería: [ MN1604] Coloquialemente conocida de "petaca", produce 9V de alimentación, El sistema necesita más , conexión por cable, para siguie
 - Otros: [reguladores, cables, etc.]
 
-_👉 [Incluir enlaces o esquemas de conexión si los hay]_
+_Recordar que tanto la conexión electrica , como la pcb se adjunta en este mismo repositorio.
 
 ---
 
 ## 🧱 Diseño mecánico
 **Software de diseño usado:**  
-_👉 [Ej. Fusion 360, FreeCAD...]_
+_ Para está pieza de geometría simple, pero que contaba con multiples caras, elegí freecad, debido que es con el estoy familiarizado por otras asignaturas y por tener entornos bien organizados y una comunidad activa. Aunque si es tu primera vez realizando este tipo de objetos con varias caras, te recomiendo aplicaciones con interfaces más modernas.
 
 **Método de fabricación:**  
-_👉 [Impresión 3D, corte láser...]_
+_Impresora 3D, en concreto la Anet A8. La impresión tardará bastante por culpa de los soportes, para reducir el tiempo, se podría probar o a inclinar la figura o rotar la figura para que el eje y quede como el eje x, precauición  son sujerencias no validadas. 
 
 **Versiones del chasis y decisiones de diseño:**  
-_👉 [Breve resumen + imágenes si aplica]_
+_Solo hay una versión, la publicada, en la cual prioricé que el centro de masas fuera lo más bajo posible y que estuviera centrado, apare de que no fuera necesario, tornillos más que para la placa base, aunque por como está  encastrada, no sería necesaría pasa su funcionamiento, recomiendo encarecidamente pornerlos.Para buscar un balance entre centro de masas bajo y porcentaje de ángulo de giro libre de las ruedas , sin que el chasis toque suelo, hice una incisio (diminuir el espesor a 1) en la parte baja del chasis un rectangulo para colocar la bateria , en caso de usar un portapilas más grande o una batería que superé las dimensiones de la usada habría que modificar el chasis.
 
 ---
 
@@ -81,7 +76,6 @@ _👉 [Mención al uso de filtro complementario si aplica]_
 - Respuesta a perturbaciones
 - Arranque desde diferentes posiciones
 
-_👉 [Describir brevemente cada prueba y resultados observados]_  
 _👉 [Incluir fotos, vídeos o gráficas si hay]_
 
 ---
