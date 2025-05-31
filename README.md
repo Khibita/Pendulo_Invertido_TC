@@ -63,9 +63,14 @@ El montaje se divide en 2 partes:
 **Implementación:**  
 El lenguaje es .ino, compatible con  Esp32, pero las libreria en las que se basa, los pids a utilizar, está escrita en c++.
 
-**Valores de cte del PID:**  
+**Valores de cte del PID (Op 1 - reajustes pequeños en valores cercanos al (0,0), pero resistente a golpes fuertes):**  
 - [ ] Kp = 50.0
 - [ ] Ki = 1.0
+- [ ] Kd = 20.0
+
+**Valores de cte del PID (Op 1 - se mantiene quieto totalmente, pero sensible a golpes fuertes):**  
+- [ ] Kp = 50.0
+- [ ] Ki = 2.0
 - [ ] Kd = 20.0
 
 **PID Seleccionado**
@@ -83,12 +88,15 @@ implementé la conexión por Bluetooth para que el sistema pudiera recibir órde
 ---
 
 ## Resultados
-**Escenarios de prueba:**
-- [ ] El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis, lo único que puede fallar si no tiene el suficiente espacio, en caso de golpes grandes 1 metro, medio metro en cada dirección. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco, esto se puede deber a que tiene demasiadas respuestas por segundo.
+**Hay que distingir dos casos según los valores de Kp, Ki, Kd elegidos: **
+- [ ]Op 1:  El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco.
+- [ ]Op 2:  El sistema consigue estabilizarse con golpes pequeños, pero en el caso de que el chasis toque suelo, no será capaz de conseguir levantarse de nuevo hasta chocar con algún objeto. Una vez estabilizado se mantiene estatico.
 
-- [ ] A parte la conexión bluetooth hace que pierde algo de potencia los motores, por lo que es más sensible a perturbaciones.
+En resumen dependiendo de la respuestá deseada se puede elegir una u otra e incluso otras convinaciones de Kp, Ki y Kd. 
 
-- [ ]Problemas de potencia, al romperseme los dos portapilas con que contaba tuve que hacer un arreglo con una batería de 9v auxiliar, por lo que se necesita conectar el robot a una fuente de energía. 
+**Problemas con la Potencia**
+- [ ] la conexión bluetooth hace que pierde algo de potencia los motores, por lo que es más sensible a perturbaciones, esto es debido a que el sistema no está pensado para una batería tan sencilla.
+- [ ] Problemas de potencia, al romperseme los dos portapilas con que contaba tuve que hacer un arreglo con una batería de 9v auxiliar, por lo que se necesita conectar el robot a una fuente de energía. 
 
   
 ---
