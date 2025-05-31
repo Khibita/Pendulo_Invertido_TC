@@ -30,26 +30,28 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 - Driver de motor: [TB6612FNG] se ajustaba a las caracteristicas necesarias
 - Motores: [fz3176] Motor de corriente continua que se ajustaba al precio y potencia de consumo
 - Batería: [ MN1604] Coloquialemente conocida de "petaca", produce 9V de alimentación, El sistema necesita más , conexión por cable, para siguie
-- Otros: [reguladores, cables, etc.]
+- Regulador de Tensión: [LM7805]
+- Condensador: [0.1uF y 0.2uf]
+- Conectores entrada y salida :  3 de 2 pines.
 
-_Recordar que tanto la conexión electrica , como la pcb se adjunta en este mismo repositorio.
+-Recordar que tanto la conexión electrica , como la pcb se adjunta en este mismo repositorio.
 
 ---
 
 ## 🧱 Diseño mecánico
 **Software de diseño usado:**  
-_ Para está pieza de geometría simple, pero que contaba con multiples caras, elegí freecad, debido que es con el estoy familiarizado por otras asignaturas y por tener entornos bien organizados y una comunidad activa. Aunque si es tu primera vez realizando este tipo de objetos con varias caras, te recomiendo aplicaciones con interfaces más modernas.
+-Para está pieza de geometría simple, pero que contaba con multiples caras, elegí freecad, debido que es con el estoy familiarizado por otras asignaturas y por tener entornos bien organizados y una comunidad activa. Aunque si es tu primera vez realizando este tipo de objetos con varias caras, te recomiendo aplicaciones con interfaces más modernas.
 
 **Método de fabricación:**  
-_Impresora 3D, en concreto la Anet A8. La impresión tardará bastante por culpa de los soportes, para reducir el tiempo, se podría probar o a inclinar la figura o rotar la figura para que el eje y quede como el eje x, precauición  son sujerencias no validadas. 
+-Impresora 3D, en concreto la Anet A8. La impresión tardará bastante por culpa de los soportes, para reducir el tiempo, se podría probar o a inclinar la figura o rotar la figura para que el eje y quede como el eje x, precauición  son sujerencias no validadas. 
 
 **Versiones del chasis y decisiones de diseño:**  
-_Solo hay una versión, la publicada, en la cual prioricé que el centro de masas fuera lo más bajo posible y que estuviera centrado, apare de que no fuera necesario, tornillos más que para la placa base, aunque por como está  encastrada, no sería necesaría pasa su funcionamiento, recomiendo encarecidamente pornerlos.Para buscar un balance entre centro de masas bajo y porcentaje de ángulo de giro libre de las ruedas , sin que el chasis toque suelo, hice una incisio (diminuir el espesor a 1) en la parte baja del chasis un rectangulo para colocar la bateria , en caso de usar un portapilas más grande o una batería que superé las dimensiones de la usada habría que modificar el chasis.
+-Solo hay una versión, la publicada, en la cual prioricé que el centro de masas fuera lo más bajo posible y que estuviera centrado, apare de que no fuera necesario, tornillos más que para la placa base, aunque por como está  encastrada, no sería necesaría pasa su funcionamiento, recomiendo encarecidamente pornerlos.Para buscar un balance entre centro de masas bajo y porcentaje de ángulo de giro libre de las ruedas , sin que el chasis toque suelo, hice una incisio (diminuir el espesor a 1) en la parte baja del chasis un rectangulo para colocar la bateria , en caso de usar un portapilas más grande o una batería que superé las dimensiones de la usada habría que modificar el chasis.
 
 ---
 
 ## 🔌 Montaje
-_El montaje se divide en 2 partes:
+-El montaje se divide en 2 partes:
 - [ ] Soldar: soldar todos los componentes a la placa, en caso de querer reutilizar los componentes, recomiendo soldar conectores macho hembra a la placa en vez de los propios componentes. IMPORTANTE SEGUIR LAS DIRECCIONES DE LA PCB .
 - [ ] Colocar las piezas: recomiendo empezar por la pcb, atornillarla una vez colocada, seguir con los motores y por último pegar la batería con silicona a su hueco. 
 ---
@@ -59,7 +61,7 @@ _El montaje se divide en 2 partes:
 **Controlador:** PID
 
 **Implementación:**  
-_El lenguaje es .ino, para que lo entienda la placa Esp32, pero las libreria en las que se basa, los pids a utilizar, está escrita en c++.
+El lenguaje es .ino, para que lo entienda la placa Esp32, pero las libreria en las que se basa, los pids a utilizar, está escrita en c++.
 
 **Valores de cte del PID:**  
 - Kp = 50.0
