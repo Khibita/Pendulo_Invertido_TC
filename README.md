@@ -25,14 +25,14 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 
 ## 🛠️ Hardware
 **Componentes usados:**
-- ESP32: [WROOM 32D], elegimos está por su bajo costé, conexiones inalambricas y poder ejecutar codigo c.
-- Sensor: [MPU9250], elegimos está por su bajo costé, y devolver aceleración en 9 ejes.
-- Driver de motor: [TB6612FNG] se ajustaba a las caracteristicas necesarias
-- Motores: [fz3176] Motor de corriente continua que se ajustaba al precio y potencia de consumo
-- Batería: [ MN1604] Coloquialemente conocida de "petaca", produce 9V de alimentación, El sistema necesita más , conexión por cable, para siguie
-- Regulador de Tensión: [LM7805]
-- Condensador: [0.1uF y 0.2uf]
-- Conectores entrada y salida :  3 de 2 pines.
+- [ ] ESP32: [WROOM 32D], elegimos está por su bajo costé, conexiones inalambricas y poder ejecutar codigo c.
+- [ ] Sensor: [MPU9250], elegimos está por su bajo costé, y devolver aceleración en 9 ejes.
+- [ ] Driver de motor: [TB6612FNG] se ajustaba a las caracteristicas necesarias
+- [ ] Motores: [fz3176] Motor de corriente continua que se ajustaba al precio y potencia de consumo
+- [ ] Batería: [ MN1604] Coloquialemente conocida de "petaca", produce 9V de alimentación, El sistema necesita más , conexión por cable, para siguie
+- [ ] Regulador de Tensión: [LM7805]
+- [ ] Condensador: [0.1uF y 0.2uf]
+- [ ] Conectores entrada y salida :  3 de 2 pines.
 
 -Recordar que tanto la conexión electrica , como la pcb se adjunta en este mismo repositorio.
 
@@ -40,18 +40,18 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 
 ## 🧱 Diseño mecánico
 **Software de diseño usado:**  
--Para está pieza de geometría simple, pero que contaba con multiples caras, elegí freecad, debido que es con el estoy familiarizado por otras asignaturas y por tener entornos bien organizados y una comunidad activa. Aunque si es tu primera vez realizando este tipo de objetos con varias caras, te recomiendo aplicaciones con interfaces más modernas.
+- [ ]Para está pieza de geometría simple, pero que contaba con multiples caras, elegí freecad, debido que es con el estoy familiarizado por otras asignaturas y por tener entornos bien organizados y una comunidad activa. Aunque si es tu primera vez realizando este tipo de objetos con varias caras, te recomiendo aplicaciones con interfaces más modernas.
 
 **Método de fabricación:**  
--Impresora 3D, en concreto la Anet A8. La impresión tardará bastante por culpa de los soportes, para reducir el tiempo, se podría probar o a inclinar la figura o rotar la figura para que el eje y quede como el eje x, precauición  son sujerencias no validadas. 
+- [ ]Impresora 3D, en concreto la Anet A8. La impresión tardará bastante por culpa de los soportes, para reducir el tiempo, se podría probar o a inclinar la figura o rotar la figura para que el eje y quede como el eje x, precauición  son sujerencias no validadas. 
 
 **Versiones del chasis y decisiones de diseño:**  
--Solo hay una versión, la publicada, en la cual prioricé que el centro de masas fuera lo más bajo posible y que estuviera centrado, apare de que no fuera necesario, tornillos más que para la placa base, aunque por como está  encastrada, no sería necesaría pasa su funcionamiento, recomiendo encarecidamente pornerlos.Para buscar un balance entre centro de masas bajo y porcentaje de ángulo de giro libre de las ruedas , sin que el chasis toque suelo, hice una incisio (diminuir el espesor a 1) en la parte baja del chasis un rectangulo para colocar la bateria , en caso de usar un portapilas más grande o una batería que superé las dimensiones de la usada habría que modificar el chasis.
+- [ ]Solo hay una versión, la publicada, en la cual prioricé que el centro de masas fuera lo más bajo posible y que estuviera centrado, apare de que no fuera necesario, tornillos más que para la placa base, aunque por como está  encastrada, no sería necesaría pasa su funcionamiento, recomiendo encarecidamente pornerlos.Para buscar un balance entre centro de masas bajo y porcentaje de ángulo de giro libre de las ruedas , sin que el chasis toque suelo, hice una incisio (diminuir el espesor a 1) en la parte baja del chasis un rectangulo para colocar la bateria , en caso de usar un portapilas más grande o una batería que superé las dimensiones de la usada habría que modificar el chasis.
 
 ---
 
 ## 🔌 Montaje
--El montaje se divide en 2 partes:
+El montaje se divide en 2 partes:
 - [ ] Soldar: soldar todos los componentes a la placa, en caso de querer reutilizar los componentes, recomiendo soldar conectores macho hembra a la placa en vez de los propios componentes. IMPORTANTE SEGUIR LAS DIRECCIONES DE LA PCB .
 - [ ] Colocar las piezas: recomiendo empezar por la pcb una vez atornillada, seguir con los motores y por último pegar la batería con silicona al hueco posterior a la placa. 
 ---
@@ -64,15 +64,15 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 El lenguaje es .ino, compatible con  Esp32, pero las libreria en las que se basa, los pids a utilizar, está escrita en c++.
 
 **Valores de cte del PID:**  
-- Kp = 50.0
-- Ki = 1.0
-- Kd = 20.0
+- [ ] Kp = 50.0
+- [ ] Ki = 1.0
+- [ ] Kd = 20.0
 
 **PID Seleccionado**
-- PID Filtrado, opción 3.
+- [ ] PID Filtrado, opción 3.
 
 
--De forma resumida el codigo  compara el setpoint (posición destino) y la actual, a través del pid seleccionado, devuelve valores para los motores, que luego de ser normalizador , para enviar a los motores.
+De forma resumida el codigo  compara el setpoint (posición destino) y la actual, a través del pid seleccionado, devuelve valores para los motores, que luego de ser normalizador , para enviar a los motores.
 
 ---
 
@@ -84,11 +84,11 @@ implementé la conexión por Bluetooth para que el sistema pudiera recibir órde
 
 ## Resultados
 **Escenarios de prueba:**
-- El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis, lo único que puede fallar si no tiene el suficiente espacio, en caso de golpes grandes 1 metro, medio metro en cada dirección. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco, esto se puede deber a que tiene demasiadas respuestas por segundo.
+- [ ] El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis, lo único que puede fallar si no tiene el suficiente espacio, en caso de golpes grandes 1 metro, medio metro en cada dirección. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco, esto se puede deber a que tiene demasiadas respuestas por segundo.
 
-- A parte la conexión bluetooth hace que pierde algo de potencia los motores, por lo que es más sensible a perturbaciones.
+- [ ] A parte la conexión bluetooth hace que pierde algo de potencia los motores, por lo que es más sensible a perturbaciones.
 
-- Problemas de potencia, al romperseme los dos portapilas con que contaba tuve que hacer un arreglo con una batería de 9v auxiliar, por lo que se necesita conectar el robot a una fuente de energía. 
+- [ ]Problemas de potencia, al romperseme los dos portapilas con que contaba tuve que hacer un arreglo con una batería de 9v auxiliar, por lo que se necesita conectar el robot a una fuente de energía. 
 
   
 ---
