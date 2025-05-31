@@ -40,13 +40,13 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 
 ## 🧱 Diseño mecánico
 **Software de diseño usado:**  
-- [ ]Para está pieza de geometría simple, pero que contaba con multiples caras, elegí freecad, debido que es con el estoy familiarizado por otras asignaturas y por tener entornos bien organizados y una comunidad activa. Aunque si es tu primera vez realizando este tipo de objetos con varias caras, te recomiendo aplicaciones con interfaces más modernas.
+- [ ] Para está pieza de geometría simple, pero que contaba con multiples caras, elegí freecad, debido que es con el estoy familiarizado por otras asignaturas y por tener entornos bien organizados y una comunidad activa. Aunque si es tu primera vez realizando este tipo de objetos con varias caras, te recomiendo aplicaciones con interfaces más modernas.
 
 **Método de fabricación:**  
-- [ ]Impresora 3D, en concreto la Anet A8. La impresión tardará bastante por culpa de los soportes, para reducir el tiempo, se podría probar o a inclinar la figura o rotar la figura para que el eje y quede como el eje x, precauición  son sujerencias no validadas. 
+- [ ] Impresora 3D, en concreto la Anet A8. La impresión tardará bastante por culpa de los soportes, para reducir el tiempo, se podría probar o a inclinar la figura o rotar la figura para que el eje y quede como el eje x, precauición  son sujerencias no validadas. 
 
 **Versiones del chasis y decisiones de diseño:**  
-- [ ]Solo hay una versión, la publicada, en la cual prioricé que el centro de masas fuera lo más bajo posible y que estuviera centrado, apare de que no fuera necesario, tornillos más que para la placa base, aunque por como está  encastrada, no sería necesaría pasa su funcionamiento, recomiendo encarecidamente pornerlos.Para buscar un balance entre centro de masas bajo y porcentaje de ángulo de giro libre de las ruedas , sin que el chasis toque suelo, hice una incisio (diminuir el espesor a 1) en la parte baja del chasis un rectangulo para colocar la bateria , en caso de usar un portapilas más grande o una batería que superé las dimensiones de la usada habría que modificar el chasis.
+- [ ] Solo hay una versión, la publicada, en la cual prioricé que el centro de masas fuera lo más bajo posible y que estuviera centrado, apare de que no fuera necesario, tornillos más que para la placa base, aunque por como está  encastrada, no sería necesaría pasa su funcionamiento, recomiendo encarecidamente pornerlos.Para buscar un balance entre centro de masas bajo y porcentaje de ángulo de giro libre de las ruedas , sin que el chasis toque suelo, hice una incisio (diminuir el espesor a 1) en la parte baja del chasis un rectangulo para colocar la bateria , en caso de usar un portapilas más grande o una batería que superé las dimensiones de la usada habría que modificar el chasis.
 
 ---
 
@@ -89,8 +89,8 @@ implementé la conexión por Bluetooth para que el sistema pudiera recibir órde
 
 ## Resultados
 **Hay que distingir dos casos según los valores de Kp, Ki, Kd elegidos: **
-- [ ]Op 1:  El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco.
-- [ ]Op 2:  El sistema consigue estabilizarse con golpes pequeños, pero en el caso de que el chasis toque suelo, no será capaz de conseguir levantarse de nuevo hasta chocar con algún objeto. Una vez estabilizado se mantiene estatico.
+- [ ] Op 1:  El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco.
+- [ ] Op 2:  El sistema consigue estabilizarse con golpes pequeños, pero en el caso de que el chasis toque suelo, no será capaz de conseguir levantarse de nuevo hasta chocar con algún objeto. Una vez estabilizado se mantiene estatico.
 
 En resumen dependiendo de la respuestá deseada se puede elegir una u otra e incluso otras convinaciones de Kp, Ki y Kd. 
 
