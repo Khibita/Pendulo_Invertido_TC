@@ -4,6 +4,8 @@
 #include <BluetoothSerial.h>
 
 int PID_MODE = 3; //Variable de control 
+float dt = 0.005; //Periodo de actualizacion del void loop, EN SEGUNDOS
+unsigned long dt_us = dt * 1e6; //Lo pasamos a microsegundos
 
 MPU6050 mpu;
 BluetoothSerial SerialBT;
@@ -15,7 +17,6 @@ const int STBY = 15;
 //Valores, para el estado 0
 float setpoint = 0.0;
 float measured_value = 0.0;
-float dt = 0.005;
 float output = 0;
 
 float desplazamientoX = 0.0;
@@ -77,7 +78,7 @@ void applyMotorB(float pwm) {
 void loop() {
   static unsigned long lastControl = 0;
   unsigned long now = micros(); //Devuelve los msec 
-  if (now - lastControl >= dt * 1e6) {
+  if (now - lastControl >= dt_us) { 
     lastControl = now;
 
     measured_value = getAngle();
