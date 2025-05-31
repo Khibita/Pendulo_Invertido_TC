@@ -88,7 +88,7 @@ implementé la conexión por Bluetooth para que el sistema pudiera recibir órde
 ---
 
 ## Resultados
-**Hay que distingir dos casos según los valores de Kp, Ki, Kd elegidos: **
+**Hay que distingir dos casos según los valores de Kp, Ki, Kd elegidos:**
 - [ ] Op 1:  El sistema llega conseguir estabilizarse en la mayoría de casos a golpes que incluso hagan tocar el suelo con el chasis. Una vez estabilizado empieza a tener pequeños sobre ajustes que hace que oscile un poco.
 - [ ] Op 2:  El sistema consigue estabilizarse con golpes pequeños, pero en el caso de que el chasis toque suelo, no será capaz de conseguir levantarse de nuevo hasta chocar con algún objeto. Una vez estabilizado se mantiene estatico.
 
