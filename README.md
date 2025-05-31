@@ -53,7 +53,7 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 ## 🔌 Montaje
 -El montaje se divide en 2 partes:
 - [ ] Soldar: soldar todos los componentes a la placa, en caso de querer reutilizar los componentes, recomiendo soldar conectores macho hembra a la placa en vez de los propios componentes. IMPORTANTE SEGUIR LAS DIRECCIONES DE LA PCB .
-- [ ] Colocar las piezas: recomiendo empezar por la pcb, atornillarla una vez colocada, seguir con los motores y por último pegar la batería con silicona a su hueco. 
+- [ ] Colocar las piezas: recomiendo empezar por la pcb una vez atornillada, seguir con los motores y por último pegar la batería con silicona al hueco posterior a la placa. 
 ---
 
 
@@ -61,7 +61,7 @@ Al final, se ha logrado crear un robot que puede mantenerse en posición vertica
 **Controlador:** PID
 
 **Implementación:**  
-El lenguaje es .ino, para que lo entienda la placa Esp32, pero las libreria en las que se basa, los pids a utilizar, está escrita en c++.
+El lenguaje es .ino, compatible con  Esp32, pero las libreria en las que se basa, los pids a utilizar, está escrita en c++.
 
 **Valores de cte del PID:**  
 - Kp = 50.0
@@ -72,7 +72,7 @@ El lenguaje es .ino, para que lo entienda la placa Esp32, pero las libreria en l
 - PID Filtrado, opción 3.
 
 
-_De forma resumida el codigo  compara el setpoint (posición destino) y la actual, a través del pid seleccionado, devuelve valores para los motores, que luego de ser normalizador , para enviar a los motores.
+-De forma resumida el codigo  compara el setpoint (posición destino) y la actual, a través del pid seleccionado, devuelve valores para los motores, que luego de ser normalizador , para enviar a los motores.
 
 ---
 
